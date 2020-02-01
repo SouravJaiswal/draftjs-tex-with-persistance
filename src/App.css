@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.demo-wrapper {
+  -webkit-user-select: none; /* Chrome/Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+ */
+
+/* Rules below not implemented in browsers yet */
+-o-user-select: none;
+user-select: none;
+}
+
+.katex .katex-mathml{
+  display:none
+}

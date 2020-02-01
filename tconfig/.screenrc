@@ -1,0 +1,48 @@
+# make bash our shell
+shell /bin/bash
+
+# detach on hangup
+autodetach on
+
+# don't display copyright page
+startup_message off
+
+#should resolve some "can't find display" issues
+setenv DISPLAY ':0'
+
+# scroll back
+defscrollback 30000
+
+# setup the caption
+hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w %=%Y-%m-%d %c%<"
+
+# Set the altscreen so that when you quit vi, it will go back to
+# what it was before
+altscreen on
+
+# a do-nothing bind so ^a s doesn't suspend screen
+bind s
+
+# for switching between regions
+# ^k no longer kills a window, but ^K still does
+bind j focus down
+bind ^j focus down
+bind k focus up
+bind ^k focus up
+
+#visual bell on
+vbell on
+
+#set bindings so we can easily access windows 10-18
+bind  ) select 10
+bind  ! select 11
+bind  @ select 12
+bind \# select 13
+bind \$ select 14
+bind  % select 15
+bind \^ select 16
+bind  & select 17
+bind  * select 18
+bind  ( select 19
+
+# reminder: ^X deletes a region
